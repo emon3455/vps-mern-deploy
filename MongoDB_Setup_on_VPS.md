@@ -32,6 +32,9 @@ Start and enable MongoDB service.
   sudo systemctl daemon-reload
 ```
 ```bash
+  sudo apt update
+```
+```bash
   sudo systemctl start mongod
 ```
 ```bash
