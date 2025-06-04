@@ -156,7 +156,7 @@ Configure Nginx for React Frontends
 ```bash
  server {
     listen 80;
-    server_name yourdomain1.com www.yourdomain1.com;
+    server_name yourdomain1.com;
 
     location / {
         root /var/www/your-repo/frontend/dist;
@@ -175,7 +175,7 @@ Create a similar file for the second or multiple React app.
 ```bash
 server {
     listen 80;
-    server_name yourdomain2.com www.yourdomain2.com;
+    server_name yourdomain2.com;
 
     location / {
         root /var/www/react-app-2/dist;
@@ -217,7 +217,7 @@ server {
     server_name api.yourdomain.com;
 
     location / {
-        proxy_pass http://localhost:4000;
+        proxy_pass http://localhost:5000;
         proxy_set_header Host $host;
         proxy_set_header X-Real-IP $remote_addr;
         proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
